@@ -1,0 +1,71 @@
+#Ex1
+
+def reajuste_salario (salario):
+    aumento20 = (salario * 20)/100
+    aumento15 = (salario * 15)/100
+    aumento10 = (salario * 10)/100
+    aumento5 = (salario * 5)/100
+    if salario <= 280: 
+        return salario + aumento20 
+    elif salario <=700: 
+        return salario + aumento15 
+    elif salario <= 1500: 
+        return salario + aumento10 
+    else:
+        return salario + aumento5 
+    
+salario = float(input("Digite o seu salario: "))
+salario_novo = reajuste_salario(salario)
+print(f"o salario {salario} mudou para {salario_novo}")
+
+
+
+#Ex2
+def dia_semana (dia):
+    if dia == "1": 
+        print("Domingo")
+
+    elif dia == "2":
+        print("Segunda")
+
+    elif dia == "3":
+        print("Terça")
+
+    elif dia == "4":
+        print("Quarta")
+
+    elif dia == "5":
+        print("Quinta")
+
+    elif dia == "6":
+        print("Sexta")
+
+    elif dia == "7":
+        print("Segunda")
+    
+    else: 
+        print("Valor Inválido")
+
+dia_semana(input("Digite o dia da semana: "))
+
+
+
+
+ #Ex3
+a = float(input("Digite a: "))
+if a == 0:
+    print("A equaçao não é do segundo grau")
+else: 
+    b = float(input("Digite b: "))
+    c = float(input("Digite c: "))
+    delta = b**2 - 4*a*c 
+    if delta < 0:
+        print("Não possui raízes reais")
+    elif delta == 0:
+        raiz = -b / (2*a)
+        print(f"Possui uma raiz real {raiz} ")
+    else: 
+        raiz1 = (-b + (delta**0.5)) / (2*a)
+        raiz2 = (-b - (delta**0.5)) / (2*a)
+        print(f"Possui duas raizes reais raiz1: {raiz1} raiz2: {raiz2} ")
+      
