@@ -1,0 +1,36 @@
+#EXERCICIO1
+#Monte uma função que recebe um salário por hora e o número de horas 
+# trabalhadas no mês,
+# e retorne o salário a ser recebido.
+
+def salario_recebido(salario_hora, numero_horas):
+    return salario_hora * numero_horas
+#O exercicio só vai até aqui 
+
+#sem varioavel dar o print, dessa forma não guarda os valores na memoria, não to guardando numero em nenhuma variavel, 
+# to imprimindo direto os numeros
+print(salario_recebido(float(input("Salário por hora: ")), float(input("Número de horas: "))))
+
+#melhor forma
+salario_hora = float(input("salario por hora: "))
+numero_horas = float(input("Numero de horas: "))
+print(salario_recebido(salario_hora, numero_horas))
+
+
+#print com variavel, forma mais expecifica, não interfere mudar o nome da variavel, 
+# nesse caso posso somar e diminuir o salario. acrescentando mais uma variavel e colocando a função dentro.
+#  No caso, valor_salario
+sal_hora = float(input("salario_hora: "))
+num_hora = float(input("numero_horas: "))
+valor_salario = salario_recebido(sal_hora, num_hora)
+print(valor_salario)
+
+novo_salario = valor_salario - 300 
+print(novo_salario)
+print(valor_salario)
+
+valor_salario = valor_salario + 500 
+print(valor_salario)
+
+
+
