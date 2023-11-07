@@ -1,0 +1,62 @@
+import random
+
+
+resultados = []
+
+
+for _ in range(100):
+    resultado = random.randint(1, 6)
+    resultados.append(resultado)
+
+
+frequencia = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+
+for resultado in resultados:
+    frequencia[resultado] += 1
+
+
+for valor, contagem in frequencia.items():
+    print(f'Valor {valor}: {contagem} vezes')
+
+    import json
+
+
+dados_alunos = {
+    "1234": {
+        "nome": "André Guimarães",
+        "e-mail": "andre.guim@gmail.com"
+    },
+    "5678": {
+        "nome": "Vanessa Barboza",
+        "e-mail": "vbarboza@yahoo.com"
+    },
+    "9012": {
+        "nome": "Renato Amorim",
+        "e-mail": "ream@hotmail.com"
+    }
+}
+
+
+with open("alunos.json", "w") as arquivo:
+    json.dump(dados_alunos, arquivo, indent=4)
+
+
+
+
+    from datetime import datetime
+
+def formatar_data(data):
+    try:
+        data_obj = datetime.strptime(data, "%d/%m/%Y")
+        data_formatada = data_obj.strftime("%-d de %B de %Y")
+        return data_formatada
+    except ValueError:
+        return None
+
+
+data = "07/11/2023"
+data_formatada = formatar_data(data)
+if data_formatada:
+    print(f'Data formatada: {data_formatada}')
+else:
+    print('Data inválida')
